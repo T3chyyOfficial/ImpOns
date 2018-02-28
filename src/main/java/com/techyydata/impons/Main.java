@@ -13,16 +13,19 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class Main
 {
 
+    @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
 
     }
 
+    @Mod.EventHandler
     public void init(FMLInitializationEvent event)
     {
         ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "script_writer"), ApplicationScriptWriter.class);
     }
 
+    @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event)
     {
 
