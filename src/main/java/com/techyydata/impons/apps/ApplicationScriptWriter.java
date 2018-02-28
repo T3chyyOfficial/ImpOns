@@ -1,13 +1,9 @@
 package com.techyydata.impons.apps;
 
-/*
- * Script Writer Application class
- * Author: TechyyMC
- */
+import net.minecraft.nbt.NBTTagCompound;
 
 import com.mrcrayfish.device.api.app.*;
 import com.mrcrayfish.device.api.app.component.*;
-import net.minecraft.nbt.NBTTagCompound;
 
 public class ApplicationScriptWriter extends Application {
 
@@ -21,7 +17,7 @@ public class ApplicationScriptWriter extends Application {
         scriptLayout = new Layout(0, 0, 200, 120);
         this.setCurrentLayout(scriptLayout);
 
-        creditLabel = new Label("Script Writer created by TechyyMC", 2, 95);
+        creditLabel = new Label("Script Writer was created by TechyyMC", 2, 95);
         scriptLayout.addComponent(creditLabel);
 
         scriptArea = new TextArea(4, 20, 180, 70);
@@ -31,7 +27,6 @@ public class ApplicationScriptWriter extends Application {
         this.scriptTitle.setPlaceholder("Title of Script");
         this.scriptTitle.setIcon(Icons.EDIT);
         scriptLayout.addComponent(scriptTitle);
-
     }
 
     @Override

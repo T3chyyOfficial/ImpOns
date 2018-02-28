@@ -1,6 +1,7 @@
 package com.techyydata.impons;
 
 import com.mrcrayfish.device.api.ApplicationManager;
+import com.techyydata.impons.apps.ApplicationCrayOSAntivirus;
 import com.techyydata.impons.apps.ApplicationScriptWriter;
 import com.techyydata.impons.util.Reference;
 import net.minecraft.util.ResourceLocation;
@@ -23,6 +24,7 @@ public class Main
     public void init(FMLInitializationEvent event)
     {
         ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "script_writer"), ApplicationScriptWriter.class);
+        ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "crayos_antivirus"), ApplicationCrayOSAntivirus.class);
     }
 
     @Mod.EventHandler

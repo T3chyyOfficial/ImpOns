@@ -1,3 +1,7 @@
 app.impons.script_writer.name=Script Writer
 app.impons.script_writer.desc=Just like Note Stash. But improved
 app.impons.script_writer.author=TechyyMC
+
+app.impons.crayos_antivirus.name=CrayOS Antivirus
+app.impons.crayos_antivirus.desc=Get rid of all those stinky viruses from your laptop!
+app.impons.crayos_antivirus.author=TechyyMC
