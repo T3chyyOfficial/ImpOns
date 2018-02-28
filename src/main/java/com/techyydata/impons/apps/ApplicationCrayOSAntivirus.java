@@ -6,17 +6,32 @@ import net.minecraft.nbt.NBTTagCompound;
 
 public class ApplicationCrayOSAntivirus extends Application {
 
+    //Application Variables
     private Layout crayLayout;
     private Label titleLabel;
+    private Button scanButton;
+    private Layout scanningLayout;
 
 
+    //Application implementation
     @Override
     public void init() {
         crayLayout = new Layout(0, 0, 200, 120);
         this.setCurrentLayout(crayLayout);
 
-        titleLabel = new Label("CrayOS Antivirus", 76, 1);
+        titleLabel = new Label("CrayOS Antivirus", 55, 1);
         crayLayout.addComponent(titleLabel);
+
+        scanButton = new Button(55, 95, "Scan for viruses");
+        scanButton.setSize(63, 20);
+        scanButton.setClickListener((mouseX, mouseY, mouseButton) -> {
+                    if (mouseButton == 0) {
+                        this.setCurrentLayout(scanningLayout);
+                    }
+                });
+        crayLayout.addComponent(scanButton);
+
+        scanningLayout = new Layout(0, 0, 45, 30);
     }
 
     @Override
