@@ -1,5 +1,10 @@
 package com.techyydata.impons.apps;
 
+/**
+ * CrayOS Antivirus Application Class
+ * Author: TechyyMC
+ */
+
 import com.mrcrayfish.device.api.app.*;
 import com.mrcrayfish.device.api.app.component.*;
 import net.minecraft.nbt.NBTTagCompound;
@@ -11,9 +16,10 @@ public class ApplicationCrayOSAntivirus extends Application {
     private Label titleLabel;
     private Button scanButton;
     private Layout scanningLayout;
+    private Spinner loading;
 
 
-    //Application implementation
+    //Application Components
     @Override
     public void init() {
         crayLayout = new Layout(0, 0, 200, 120);
@@ -23,7 +29,7 @@ public class ApplicationCrayOSAntivirus extends Application {
         crayLayout.addComponent(titleLabel);
 
         scanButton = new Button(55, 95, "Scan for viruses");
-        scanButton.setSize(63, 20);
+        scanButton.setSize(100, 20);
         scanButton.setClickListener((mouseX, mouseY, mouseButton) -> {
                     if (mouseButton == 0) {
                         this.setCurrentLayout(scanningLayout);
@@ -31,7 +37,9 @@ public class ApplicationCrayOSAntivirus extends Application {
                 });
         crayLayout.addComponent(scanButton);
 
-        scanningLayout = new Layout(0, 0, 45, 30);
+        scanningLayout = new Layout(0, 0, 150, 60);
+        loading = new Spinner(1, 1);
+        scanningLayout.addComponent(loading);
     }
 
     @Override

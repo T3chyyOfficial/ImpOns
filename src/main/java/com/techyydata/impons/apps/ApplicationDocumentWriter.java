@@ -1,5 +1,10 @@
 package com.techyydata.impons.apps;
 
+/**
+ * Document Writer Application Class
+ * Author: TechyyMC
+ */
+
 import net.minecraft.nbt.NBTTagCompound;
 
 import com.mrcrayfish.device.api.app.*;
@@ -7,11 +12,13 @@ import com.mrcrayfish.device.api.app.component.*;
 
 public class ApplicationDocumentWriter extends Application {
 
+    //Application Variables
     private Layout scriptLayout;
     private Label creditLabel;
     private TextArea scriptArea;
     private TextField scriptTitle;
 
+    //Application Components
     @Override
     public void init() {
         scriptLayout = new Layout(0, 0, 225, 120);
