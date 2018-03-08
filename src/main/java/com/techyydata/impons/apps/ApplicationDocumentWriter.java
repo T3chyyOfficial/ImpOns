@@ -46,7 +46,7 @@ public class ApplicationDocumentWriter extends Application {
         });
         scriptLayout.addComponent(saveButton);
 
-        openButton = new Button(30, 106, "Open");
+        openButton = new Button(70, 106, "Open");
         openButton.setSize(63, 20);
         openButton.setClickListener((mouseX, mouseY, mouseButton) -> {
             if (mouseButton == 0) {
