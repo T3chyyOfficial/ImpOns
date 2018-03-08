@@ -18,6 +18,7 @@ public class ApplicationDocumentWriter extends Application {
     private TextArea scriptArea;
     private TextField scriptTitle;
     private Button saveButton;
+    private Button openButton;
 
     //Application Components
     @Override
@@ -36,7 +37,7 @@ public class ApplicationDocumentWriter extends Application {
         this.scriptTitle.setIcon(Icons.EDIT);
         scriptLayout.addComponent(scriptTitle);
 
-        saveButton = new Button(1, 100, "Save");
+        saveButton = new Button(1, 106, "Save");
         saveButton.setSize(63, 20);
         saveButton.setClickListener((mouseX, mouseY, mouseButton) -> {
             if (mouseButton == 0) {
@@ -44,6 +45,15 @@ public class ApplicationDocumentWriter extends Application {
             }
         });
         scriptLayout.addComponent(saveButton);
+
+        openButton = new Button(30, 106, "Open");
+        openButton.setSize(63, 20);
+        openButton.setClickListener((mouseX, mouseY, mouseButton) -> {
+            if (mouseButton == 0) {
+                this.openDialog(new Dialog.OpenFile(this));
+            }
+        });
+        scriptLayout.addComponent(openButton);
 
     }
 
