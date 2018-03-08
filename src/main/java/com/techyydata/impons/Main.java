@@ -3,6 +3,7 @@ package com.techyydata.impons;
 import com.mrcrayfish.device.api.ApplicationManager;
 import com.techyydata.impons.apps.ApplicationCrayOSAntivirus;
 import com.techyydata.impons.apps.ApplicationDocumentWriter;
+import com.techyydata.impons.apps.ApplicationTechyyWeb;
 import com.techyydata.impons.util.Reference;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
@@ -22,6 +23,7 @@ public class Main {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "techyy_web"), ApplicationTechyyWeb.class);
         ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "document_writer"), ApplicationDocumentWriter.class);
         ApplicationManager.registerApplication(new ResourceLocation(Reference.MOD_ID, "crayos_antivirus"), ApplicationCrayOSAntivirus.class);
     }
