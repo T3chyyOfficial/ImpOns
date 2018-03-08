@@ -41,7 +41,7 @@ public class ApplicationDocumentWriter extends Application {
         saveButton.setSize(63, 20);
         saveButton.setClickListener((mouseX, mouseY, mouseButton) -> {
             if (mouseButton == 0) {
-                this.openDialog(new Dialog.SaveFile(this, new NBTTagCompound()));
+                this.openDialog(new Dialog.Message("This feature is still in development! Check back later or download the latest version of Imp-Ons"));
             }
         });
         scriptLayout.addComponent(saveButton);
@@ -50,7 +50,7 @@ public class ApplicationDocumentWriter extends Application {
         openButton.setSize(63, 20);
         openButton.setClickListener((mouseX, mouseY, mouseButton) -> {
             if (mouseButton == 0) {
-                this.openDialog(new Dialog.OpenFile(this));
+                this.openDialog(new Dialog.Message("This feature is still in development! Check back later or download the latest version of Imp-Ons"));
             }
         });
         scriptLayout.addComponent(openButton);
