@@ -1,6 +1,7 @@
 {
   "name": "CrayOS Antivirus v0.1.1",
   "author": "TechyyMC",
+  "icon": "impons:textures/app/icon/crayos_antivirus.png",
   "description": "${desc}",
   "version": "1.0"
 }
